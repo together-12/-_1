@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flask Message Board</title>
+</head>
+<body>
+	<h1>Flask Message Board</h1>
+	<form method="POST">
+		<label for="message">Message:</label>
+		<input type="text" id="message" name="message">
+		<input type="submit" value="Submit">
+	</form>
+	{% if messages %}
+		<h2>Messages:</h2>
+		<ul>
+			{% for message in messages %}
+				<li>{{ message }}</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+</body>
+</html>
